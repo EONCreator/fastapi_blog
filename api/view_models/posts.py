@@ -12,8 +12,8 @@ class PostCreate(BaseModel):
 
 
 class PostUpdate(BaseModel):
-    title: Optional[constr(min_length=1, max_length=255)] = None
-    content: Optional[constr(min_length=1, max_length=5000)] = None
+    title: constr(min_length=1, max_length=255)
+    content: constr(min_length=1, max_length=5000)
 
     class Config:
         orm_mode = True
